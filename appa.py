@@ -5,7 +5,7 @@ from ui import get_user_input  # import the UI function
 from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain_core.messages import SystemMessage, HumanMessage
 
-llm = ChatGoogleGenerativeAI(model="gemini-2.5-flash", temperature=0.3, google_api_key="AIzaSyBMstdrPyABv_vMviTd5gDlBp4fV6vhWT0")
+llm = ChatGoogleGenerativeAI(model="gemini-2.5-flash", temperature=0.3, google_api_key="API KEY")
 
 system_msg = SystemMessage(content="""
 You are an expert AI model explainer. Your task is to clearly and logically explain why a randomforest model made a specific prediction.
@@ -52,3 +52,4 @@ if st.button("Predict Churn"):
 
     except Exception as e:
         st.warning(f"Model Error: {e}")
+
